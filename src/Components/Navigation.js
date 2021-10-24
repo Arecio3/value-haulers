@@ -35,7 +35,7 @@ function Navigation() {
           <a href="/pricing">{t("Contact")}</a>
         </li>
       </ul>
-      <PrimaryButton name={"Contact Us"} />
+      <PrimaryButton />
     </NavigationStyled>
   );
 }

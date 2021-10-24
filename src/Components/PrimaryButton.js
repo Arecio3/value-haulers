@@ -1,10 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useTranslation } from 'react-i18next';
 
-function PrimaryButton({ name }) {
+function PrimaryButton() {
+    const { t } = useTranslation()
+
     return (
         <ButtonStyled>
-           { name }
+           {t('ContactUs')}
         </ButtonStyled>
     )
 }
