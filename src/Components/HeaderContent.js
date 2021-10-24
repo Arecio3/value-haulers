@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import SecondaryButton from "./SecondaryButton";
+import phone from '../images/phone.svg'
 
 const HeaderContent = () => {
-  let phone =
-    "https://raw.githubusercontent.com/Maclinz/yt_animated-landing-page/b9dd0913bf1b3f8b4226d7eead2dddf68dfcfa94/src/img/phone.svg";
 let pinkMessage = 'https://raw.githubusercontent.com/Maclinz/yt_animated-landing-page/b9dd0913bf1b3f8b4226d7eead2dddf68dfcfa94/src/img/message_pink.svg';
-let blueMessage = 'https://raw.githubusercontent.com/Maclinz/yt_animated-landing-page/b9dd0913bf1b3f8b4226d7eead2dddf68dfcfa94/src/img/message_blue.svg';
 let truck = 'https://cdn3d.iconscout.com/3d/premium/thumb/truck-2872398-2389819.png';
+let ring = 'https://raw.githubusercontent.com/Maclinz/yt_animated-landing-page/b9dd0913bf1b3f8b4226d7eead2dddf68dfcfa94/src/img/ring_orange.svg';
+
   return (
     <HeaderContentStyled>
       <div className="left-content">
@@ -26,7 +26,7 @@ let truck = 'https://cdn3d.iconscout.com/3d/premium/thumb/truck-2872398-2389819.
         <img className="phone" src={phone} alt="" />
         <img src={truck} className="truck" alt="" />
         <img src={pinkMessage} className="pinkMessage"  alt="" />
-        <img src={blueMessage} className="blueMessage" alt="" />
+        <img src={ring} className="ring"  alt="" />
       </div>
     </HeaderContentStyled>
   );
@@ -57,22 +57,28 @@ const HeaderContentStyled = styled.div`
   .right-content {
           position: relative;
 
-          .truck {
-              position: absolute;
-              bottom: 0;
-              right: 0;
-              height: 300px;
+          .phone {
+              height: 600px;
+
           }
+
           .pinkMessage {
               position: absolute;
-              top: 0;
               right: 0;
+              top: 0;
               left: auto;
           }
-          .blueMessage {
+          .truck {
               position: absolute;
-              bottom: 15%;
-              left: 0;
+              bottom: 1%;
+              top: 70%;
+              right: 60%;
+          }
+          .ring {
+              position: absolute;
+              bottom: 10%;
+              right: 0;
+              left: auto;
           }
       }
 `;
