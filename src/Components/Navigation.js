@@ -17,7 +17,6 @@ function Navigation() {
       <div className="logo">
         <img className="logo-img" src={logo} alt="sprinter van" />
       </div>
-      <DropDown />
       <ul>
         <li>
           <a href="/">{t("Home")}</a>
@@ -34,6 +33,7 @@ function Navigation() {
         <li>
           <a href="/pricing">{t("Contact")}</a>
         </li>
+      <DropDown />
       </ul>
       <PrimaryButton />
     </NavigationStyled>
