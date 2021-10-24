@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import HeaderContent from './HeaderContent'
 import Navigation from './Navigation'
 
 const bg = 'https://raw.githubusercontent.com/Maclinz/yt_animated-landing-page/b9dd0913bf1b3f8b4226d7eead2dddf68dfcfa94/src/img/bg.svg'
@@ -10,6 +11,7 @@ const Header = () => {
         <HeaderStyled>
             <div className="header-content">
                 <Navigation />
+                <HeaderContent />
             </div>
         </HeaderStyled>
     )

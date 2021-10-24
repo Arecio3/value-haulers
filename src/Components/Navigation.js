@@ -45,6 +45,7 @@ const NavigationStyled = styled.nav`
   justify-content: space-between;
   min-height: 10vh;
   align-items: center;
+  position: sticky;
 
   .logo-img {
     margin: 0.3rem;
