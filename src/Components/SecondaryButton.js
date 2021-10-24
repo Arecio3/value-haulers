@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next'
 
 let arrow = 'https://raw.githubusercontent.com/Maclinz/yt_animated-landing-page/b9dd0913bf1b3f8b4226d7eead2dddf68dfcfa94/src/img/arrow.svg'
 
-
 const SecondaryButton = () => {
     const { t } = useTranslation()
 

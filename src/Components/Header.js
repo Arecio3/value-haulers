@@ -28,6 +28,7 @@ const HeaderStyled = styled.header`
     .header-content {
         padding: 0 10rem;
     }
+
 `;
 
 export default Header;
