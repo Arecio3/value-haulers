@@ -8,7 +8,7 @@ const CardSection = () => {
     return (
         <CardSectionStyled>
           <InnerLayout>
-            <div className='card-left'>
+            <div className='card-left' id="pricing">
                 <h1 className='heading'>Pricing</h1>
                 <h2 className='heading2'>We accept all forms of payment.</h2>
                 <p className='headingP'>We offer the ability to either pay Cash, Credit, or Debit.</p>

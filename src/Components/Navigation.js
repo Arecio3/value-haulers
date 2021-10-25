@@ -33,14 +33,14 @@ function Navigation() {
   return (
     <NavigationStyled scrollNav={scrollNav}>
         <div className="logo">
-          <img onClick={toggleHome} className="logo-img" src={logo} alt="sprinter van" />
+          <img onClick={toggleHome} className="logo-img" src={logo} smooth={true} duration={100} spy={true} exact='true' offset={-80} alt="sprinter van" />
         </div>
         <ul>
           <li>
-            <NavLinks to="/" smooth={true} duration={500} spy={true} exact='true' offset={-80}>{t("Home")}</NavLinks>
+            <NavLinks onClick={toggleHome} smooth={true} duration={100} spy={true} exact='true' offset={-80}>{t("Home")}</NavLinks>
           </li>
           <li>
-            <NavLinks to="/pricing" smooth={true} duration={500} spy={true} exact='true' offset={-80}>{t("Pricing")}</NavLinks>
+            <NavLinks to="pricing" smooth={true} duration={100} spy={true} exact='true' offset={-80}>{t("Pricing")}</NavLinks>
           </li>
           <li>
             <NavLinks to="/reviews" smooth={true} duration={500} spy={true} exact='true' offset={-80}>{t("Reviews")}</NavLinks>
