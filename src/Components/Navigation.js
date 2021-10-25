@@ -40,7 +40,7 @@ function Navigation() {
             <NavLinks to="/" smooth={true} duration={500} spy={true} exact='true' offset={-80}>{t("Home")}</NavLinks>
           </li>
           <li>
-            <NavLinks to="/benefits" smooth={true} duration={500} spy={true} exact='true' offset={-80}>{t("Benefits")}</NavLinks>
+            <NavLinks to="/contact" smooth={true} duration={500} spy={true} exact='true' offset={-80}>{t("Contact")}</NavLinks>
           </li>
           <li>
             <NavLinks to="/reviews" smooth={true} duration={500} spy={true} exact='true' offset={-80}>{t("Reviews")}</NavLinks>
@@ -49,7 +49,7 @@ function Navigation() {
             <NavLinks to="/pricing" smooth={true} duration={500} spy={true} exact='true' offset={-80}>{t("Pricing")}</NavLinks>
           </li>
           <li>
-            <NavLinks to="/contact" smooth={true} duration={500} spy={true} exact='true' offset={-80}>{t("Contact")}</NavLinks>
+            <NavLinks to="/story" smooth={true} duration={500} spy={true} exact='true' offset={-80}>{t("Story")}</NavLinks>
           </li>
           <DropDown />
         </ul>

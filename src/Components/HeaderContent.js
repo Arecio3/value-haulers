@@ -2,22 +2,22 @@ import React from "react";
 import styled from "styled-components";
 import SecondaryButton from "./SecondaryButton";
 import phone from '../images/phone.svg'
+import { useTranslation } from "react-i18next";
 
 const HeaderContent = () => {
 let pinkMessage = 'https://raw.githubusercontent.com/Maclinz/yt_animated-landing-page/b9dd0913bf1b3f8b4226d7eead2dddf68dfcfa94/src/img/message_pink.svg';
 let truck = 'https://cdn3d.iconscout.com/3d/premium/thumb/truck-2872398-2389819.png';
 let ring = 'https://raw.githubusercontent.com/Maclinz/yt_animated-landing-page/b9dd0913bf1b3f8b4226d7eead2dddf68dfcfa94/src/img/ring_orange.svg';
 
+const { t } = useTranslation()
+
   return (
     <HeaderContentStyled>
       <div className="left-content">
         <div className="left-text-container">
-          <h1>Nationwide Hauling Company</h1>
+          <h1>{t('NHS')}</h1>
           <p className="white">
-            Could be near you! We are based in
-            Tampa, Florida but work nationwide across the entire United States
-            to accomodate everyone, we offer exclusive customer service and
-            prices! Check out our prices below.
+            {t('NhsP')}
           </p>
           <SecondaryButton />
         </div>
@@ -59,7 +59,7 @@ const HeaderContentStyled = styled.div`
           position: relative;
             display: flex;
             justify-content: center;
-            top: 10%;
+            top: 15%;
           .phone {
               height: 600px;
               width: 80%;
