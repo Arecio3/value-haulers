@@ -36,6 +36,7 @@ const HeaderContentStyled = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding-top: 3rem;
+  padding: 0 10rem;
 
   .left-content {
       display: flex;
@@ -56,10 +57,12 @@ const HeaderContentStyled = styled.div`
 
   .right-content {
           position: relative;
-
+            display: flex;
+            justify-content: center;
+            top: 10%;
           .phone {
               height: 600px;
-
+              width: 80%;
           }
 
           .pinkMessage {
