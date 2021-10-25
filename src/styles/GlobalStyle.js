@@ -31,6 +31,21 @@ a {
 ::-webkit-scrollbar {
     display: none;
 }
+
+p {
+    color: var(--lavender-secondary);
+}
+
+.heading {
+    font-size: 2.7rem;
+    color: var(--purple-primary);
+
+}
+.heading2 {
+    font-size: 1.3rem;
+    color: var(--accent-pink);
+
+}
 `
 
 export default GlobalStyle

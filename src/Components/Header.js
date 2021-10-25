@@ -9,8 +9,8 @@ const bg = 'https://raw.githubusercontent.com/Maclinz/yt_animated-landing-page/b
 const Header = () => {
     return (
         <HeaderStyled>
+            <Navigation />
             <div className="header-content">
-                <Navigation />
                 <HeaderContent />
             </div>
         </HeaderStyled>
@@ -24,10 +24,6 @@ const HeaderStyled = styled.header`
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 100%;
-
-    .header-content {
-        /* padding: 0 10rem; */
-    }
 
 `;
 
