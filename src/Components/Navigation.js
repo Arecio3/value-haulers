@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import PrimaryButton from "./PrimaryButton";
-// import i18n from "../i18n";
 import { useTranslation } from "react-i18next";
 import DropDown from "./DropDown";
+import { animateScroll as scroll} from 'react-scroll'
+import { Link as LS } from 'react-scroll';
 
 function Navigation() {
   const [scrollNav, setScrollNav] = useState(false);
@@ -25,26 +26,30 @@ function Navigation() {
     window.addEventListener("scroll", changeNav);
   }, []);
 
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  }
+
   return (
     <NavigationStyled scrollNav={scrollNav}>
         <div className="logo">
-          <img className="logo-img" src={logo} alt="sprinter van" />
+          <img onClick={toggleHome} className="logo-img" src={logo} alt="sprinter van" />
         </div>
         <ul>
           <li>
-            <a href="/">{t("Home")}</a>
+            <NavLinks to="/" smooth={true} duration={500} spy={true} exact='true' offset={-80}>{t("Home")}</NavLinks>
           </li>
           <li>
-            <a href="/benefits">{t("Benefits")}</a>
+            <NavLinks to="/benefits" smooth={true} duration={500} spy={true} exact='true' offset={-80}>{t("Benefits")}</NavLinks>
           </li>
           <li>
-            <a href="/benefits">{t("Reviews")}</a>
+            <NavLinks to="/reviews" smooth={true} duration={500} spy={true} exact='true' offset={-80}>{t("Reviews")}</NavLinks>
           </li>
           <li>
-            <a href="/pricing">{t("Pricing")}</a>
+            <NavLinks to="/pricing" smooth={true} duration={500} spy={true} exact='true' offset={-80}>{t("Pricing")}</NavLinks>
           </li>
           <li>
-            <a href="/pricing">{t("Contact")}</a>
+            <NavLinks to="/contact" smooth={true} duration={500} spy={true} exact='true' offset={-80}>{t("Contact")}</NavLinks>
           </li>
           <DropDown />
         </ul>
@@ -65,12 +70,14 @@ const NavigationStyled = styled.nav`
   width: 100%;
   padding: 0 10rem;
   z-index: 10;
+  transition: all 0.3s ease-in-out;
 
   .logo-img {
     margin: 0.3rem;
     height: 100px;
     width: 100px;
     border-radius: 50%;
+    cursor: pointer;
   }
 
   ul {
@@ -79,5 +86,15 @@ const NavigationStyled = styled.nav`
     width: 40%;
   }
 `;
+
+const NavLinks = styled(LS)`
+cursor: pointer;
+transition: all 0.2s ease-in-out;
+
+&:hover {
+    transition: all 0.2s ease-in-out;
+    color: #F44E77;
+}
+`
 
 export default Navigation;
