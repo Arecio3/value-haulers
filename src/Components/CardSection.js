@@ -35,7 +35,7 @@ const CardSectionStyled = styled.section`
     .card-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        height: 350px;
+        height: 440px;
 
         .card-right {
             display: flex;

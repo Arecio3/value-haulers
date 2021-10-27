@@ -40,13 +40,13 @@ function Navigation() {
             <NavLinks onClick={toggleHome} smooth={true} duration={100} spy={true} exact='true' offset={-80}>{t("Home")}</NavLinks>
           </li>
           <li>
-            <NavLinks to="pricing" smooth={true} duration={100} spy={true} exact='true' offset={-120}>{t("Pricing")}</NavLinks>
+            <NavLinks to="pricing" smooth={true} duration={100} spy={true} exact='true' offset={-150}>{t("Pricing")}</NavLinks>
           </li>
           <li>
             <NavLinks to="reviews" smooth={true} duration={100} spy={true} exact='true' offset={-80}>{t("Reviews")}</NavLinks>
           </li>
           <li>
-            <NavLinks to="/contact" smooth={true} duration={100} spy={true} exact='true' offset={-80}>{t("Contact")}</NavLinks>
+            <NavLinks to="contact" smooth={true} duration={100} spy={true} exact='true' offset={-120}>{t("Contact")}</NavLinks>
           </li>
           <li>
             <NavLinks to="/story" smooth={true} duration={100} spy={true} exact='true' offset={-80}>{t("Story")}</NavLinks>

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import CardSection from "./Components/CardSection";
 import ReviewSection from './Components/ReviewSection';
 import Header from "./Components/Header";
+import Contact from "./Components/Contact";
 import { OuterLayout } from "./styles/Layouts";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <MainStyled>
           <CardSection />
           <ReviewSection />
+          <Contact/>
         </MainStyled>
       </OuterLayout>
     </div>

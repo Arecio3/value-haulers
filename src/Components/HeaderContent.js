@@ -70,7 +70,7 @@ const HeaderContentStyled = styled.div`
           position: relative;
             display: flex;
             justify-content: center;
-            top: 15%;
+            top: 30%;
           .phone {
               height: 600px;
               width: 80%;

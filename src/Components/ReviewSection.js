@@ -76,7 +76,6 @@ function ReviewSection() {
 
 const ReviewStyled = styled.section`
 padding: 10rem 0;
-height: 350px;
 
 .testimonial-section {
   padding: 80px 0 80px;
@@ -135,10 +134,12 @@ h3 {
 .left {
   left: 5px;
   top: 5px;
+  color: var(--dark-primary)!important;
 }
 .right {
   right: 5px;
   bottom: 5px;
+  color: var(--dark-primary)!important;
 }
 
 .test-slider {
@@ -213,7 +214,7 @@ h3 {
   border-radius: 50%;
 }
 
-outer-shadow {
+.outer-shadow {
     box-shadow: var( --outer-shadow);
 }
 
