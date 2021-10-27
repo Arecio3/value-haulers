@@ -1,25 +1,68 @@
 import React from "react";
 import styled from "styled-components";
 import traffic from "../images/traffic.mp4";
+import pic1 from "../images/pic1.jpg";
+import pic2 from "../images/pic2.jpg";
+import pic3 from "../images/pic3.jpg";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 function Story() {
   return (
-    <StoryStyled id="story">
-      <StoryBg>
-        <Video
-          src={traffic}
-          loading="lazy"
-          autoPlay
-          loop
-          muted
-          type="video/mp4"
-        />
-      </StoryBg>
-      <StoryContent>
-        <StoryH1>Our Story</StoryH1>
-      </StoryContent>
-    </StoryStyled>
-  );
+    <Carousel autoPlay='true' interval={10000} infiniteLoop='true' swipeable='true' emulateTouch='true'>
+        <StoryStyled id="story">
+          <StoryBg>
+            <Video
+              src={traffic}
+              loading="lazy"
+              autoPlay
+              loop
+              muted
+              type="video/mp4"
+            />
+          </StoryBg>
+          <StoryContent>
+            <StoryH1>Our Story</StoryH1>
+          </StoryContent>
+        </StoryStyled>
+        <StoryStyled>
+          <StoryBg>
+            <SlidePic
+              src={pic1}
+              loading="lazy"
+              type="image/jpg"
+            />
+          </StoryBg>
+          <StoryContent>
+            <StoryH1>Our Story</StoryH1>
+          </StoryContent>
+        </StoryStyled>
+        <StoryStyled>
+          <StoryBg>
+            <SlidePic
+              src={pic2}
+              loading="lazy"
+              type="image/jpg"
+            />
+          </StoryBg>
+          <StoryContent>
+            <StoryH1>Our Story</StoryH1>
+          </StoryContent>
+        </StoryStyled>
+        <StoryStyled>
+          <StoryBg>
+            <SlidePic
+              src={pic3}
+              loading="lazy"
+              type="image/jpg"
+            />
+          </StoryBg>
+          <StoryContent>
+            <StoryH1>Our Story</StoryH1>
+          </StoryContent>
+        </StoryStyled>
+    </Carousel>
+      );
 }
 
 const StoryStyled = styled.div`
@@ -81,7 +124,11 @@ max-width: 1200px;
 const StoryH1 = styled.h1`
     color: #fff;
     z-index: 3;
-    font-size: 100px;
+    font-size: 200px;
 `
+
+const SlidePic = styled.img`
+object-fit: cover 100%;
+`;
 
 export default Story;
