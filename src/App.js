@@ -5,6 +5,7 @@ import Header from "./Components/Header";
 import Contact from "./Components/Contact";
 import { OuterLayout } from "./styles/Layouts";
 import { Fade } from "react-awesome-reveal";
+import Story from "./Components/Story";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           </Fade>
         </MainStyled>
       </OuterLayout>
+          <Story />
     </div>
   );
 }

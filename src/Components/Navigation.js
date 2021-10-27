@@ -51,7 +51,7 @@ function Navigation() {
             <NavLinks to="contact" smooth={true} duration={100} spy={true} exact='true' offset={-120}>{t("Contact")}</NavLinks>
           </li>
           <li>
-            <NavLinks to="/story" smooth={true} duration={100} spy={true} exact='true' offset={-80}>{t("Story")}</NavLinks>
+            <NavLinks to="story" smooth={true} duration={100} spy={true} exact='true' offset={-80}>{t("Story")}</NavLinks>
           </li>
           <DropDown />
         </ul>
@@ -83,6 +83,18 @@ const NavigationStyled = styled.nav`
     width: 100px;
     border-radius: 50%;
     cursor: pointer;
+
+    &:hover {
+      animation: spin 1000ms linear;
+    }
+    @keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
   }
 
   ul {

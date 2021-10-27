@@ -25,7 +25,6 @@ const HeaderStyled = styled.header`
     background-image: url(${bg});
 
     .header-content{
- 
         @media screen and (max-width: 1347px){
             padding: 5rem 14rem;
         }

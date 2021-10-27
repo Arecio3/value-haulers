@@ -133,7 +133,7 @@ const ContactStyled = styled.div`
 
   .contact-section {
     padding: 80px 0 80px;
-    min-height: 100vh;
+    min-height: 70vh;
   }
 
   .contact-section h3 {
