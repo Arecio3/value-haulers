@@ -128,7 +128,6 @@ function Contact() {
 
 const ContactStyled = styled.div`
   padding: 10rem 0;
-  height: 100vw;
   /* display: grid;
   grid-template-columns: repeat(2, 1fr); */
 

@@ -79,7 +79,6 @@ padding: 10rem 0;
 
 .testimonial-section {
   padding: 80px 0 80px;
-  min-height: 100vh;
 }
 
 .testimonial-section.active {
