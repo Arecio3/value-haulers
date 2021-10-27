@@ -37,6 +37,10 @@ const CardSectionStyled = styled.section`
         grid-template-columns: repeat(2, 1fr);
         height: 440px;
 
+        @media screen and (max-width: 845px){
+            grid-template-columns: repeat(1, 1fr);
+        }
+
         .card-right {
             display: flex;
             justify-content: flex-end;

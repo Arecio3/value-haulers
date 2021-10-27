@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import DropDown from "./DropDown";
 import { animateScroll as scroll} from 'react-scroll'
 import { Link as LS } from 'react-scroll';
+import { Fade } from 'react-awesome-reveal';
 
 function Navigation() {
   const [scrollNav, setScrollNav] = useState(false);
@@ -32,6 +33,7 @@ function Navigation() {
 
   return (
     <NavigationStyled scrollNav={scrollNav}>
+      <Fade duration={1000} direction="top">
         <div className="logo">
           <NavLinks><img onClick={toggleHome} className="logo-img" src={logo} smooth="true" duration={100} spy="true" exact='true' offset={-80} alt="sprinter van" /></NavLinks>
         </div>
@@ -54,6 +56,7 @@ function Navigation() {
           <DropDown />
         </ul>
       <PrimaryButton />
+    </Fade>
     </NavigationStyled>
   );
 }
