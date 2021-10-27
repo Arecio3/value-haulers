@@ -38,10 +38,18 @@ const HeaderContentStyled = styled.div`
   padding-top: 3rem;
   padding: 0 10rem;
 
+  @media screen and (max-width: 700px){
+        grid-template-columns: repeat(1, 1fr);
+    }
+    @media screen and (max-width: 480px){
+        grid-template-columns: repeat(1, 1fr);
+    }
+
   .left-content {
       display: flex;
       align-items: center;
       padding-right: 3rem;
+      padding-top: 15rem;
       .white {
         color: white;
       }

@@ -37,12 +37,12 @@ p {
 }
 
 .heading {
-    font-size: 2.7rem;
+    font-size: 3rem;
     color: var(--purple-primary);
 
 }
 .heading2 {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     color: var(--accent-pink);
 
 }

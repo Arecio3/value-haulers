@@ -71,6 +71,8 @@ const NavigationStyled = styled.nav`
   padding: 0 10rem;
   z-index: 10;
   transition: all 0.3s ease-in-out;
+  
+  
 
   .logo-img {
     margin: 0.3rem;
@@ -95,6 +97,10 @@ transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     color: #F44E77;
 }
+
+&.active {
+        border-bottom: 3px solid red;
+    }
 `
 
 export default Navigation;
