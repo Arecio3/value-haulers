@@ -47,19 +47,39 @@ function ReviewSection() {
                 <div className="test-row">
                     <div className="test-box">
                         <div className="test-slider" style={{ transform: `translateX(-${currentSlide * 100}vw)` }}>
-                            {data.map((d, i) => (
-                            <div className="test-slider-container" key={i}>
+                            <div className="test-slider-container" key={1}>
                                 {/* testimonial start */}
                                 <div className="test-item">
                                     <i className="fa fa-quote-left left"></i>
                                     <i className="fa fa-quote-right right"></i>
-                                    <p>{d.quote}</p>
-                                    <img className="test-img" src={d.img} alt="testimonial" />
-                                    <span>{d.name}</span>
+                                    <p>Amazing Work! Really knowledgeable, fast learner and good communicator!!</p>
+                                    <img className="test-img" src="https://i.pinimg.com/736x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg" alt="testimonial" />
+                                    <span>Arecio Canton</span>
                                 </div>
                                 {/* testimonial end */}
                             </div>
-                            ))}
+                            <div className="test-slider-container" key={2}>
+                                {/* testimonial start */}
+                                <div className="test-item">
+                                    <i className="fa fa-quote-left left"></i>
+                                    <i className="fa fa-quote-right right"></i>
+                                    <p>Super fast and reliable! Also great customer service</p>
+                                    <img className="test-img" src="https://i.pinimg.com/736x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg" alt="testimonial" />
+                                    <span>Emily Morgado</span>
+                                </div>
+                                {/* testimonial end */}
+                            </div>
+                            <div className="test-slider-container" key={3}>
+                                {/* testimonial start */}
+                                <div className="test-item">
+                                    <i className="fa fa-quote-left left"></i>
+                                    <i className="fa fa-quote-right right"></i>
+                                    <p>Great to work with! Awesome team player open to new ideas and willing to learn!</p>
+                                    <img className="test-img" src="https://i.pinimg.com/736x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg" alt="testimonial" />
+                                    <span>Melanie Morgado</span>
+                                </div>
+                                {/* testimonial end */}
+                            </div>
                         </div>
                         <div className="test-slider-nav">
                             <span onClick={() => handleClick("left")} className="slider-buttons outer-shadow hover-in-shadow"><i className="fa fa-angle-left"></i></span>

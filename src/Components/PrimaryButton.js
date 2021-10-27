@@ -1,14 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useTranslation } from 'react-i18next';
+import { Link as LS } from 'react-scroll';
 
 function PrimaryButton() {
     const { t } = useTranslation()
 
     return (
+        <LinkButton to="contact" smooth={true} duration={100} spy={true} exact='true' offset={-120}>
         <ButtonStyled>
            {t('ContactUs')}
         </ButtonStyled>
+        </LinkButton>
     )
 }
 
@@ -22,5 +25,5 @@ const ButtonStyled = styled.button`
     outline: none;
     border: none;
 `
-
+const LinkButton = styled(LS)``;
 export default PrimaryButton

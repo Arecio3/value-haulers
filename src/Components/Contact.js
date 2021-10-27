@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { InnerLayout } from "../styles/Layouts";
 
 function Contact() {
-  const [state, handleSubmit] = useForm("xpzkybjr");
+  const [state, handleSubmit] = useForm("mknkaavl");
 
   return (
     <ContactStyled>
@@ -102,8 +102,8 @@ function Contact() {
                   <div className="contact-box">
                     <div className="submit-btn">
                       {state.succeeded ? (
-                        <button type="submit" className="btn-1">
-                          Message Sent!
+                        <button type="submit" style={{backgroundColor: '#F44E77', transition: 'all .5s ease-in'}}>
+                          Message Sent !
                         </button>
                       ) : (
                         <button
@@ -242,6 +242,16 @@ const ContactStyled = styled.div`
     text-align: right;
     margin-right: 550px;
     padding-right: 0 15px;
+  }
+
+  .btn-1-sent {
+      background-color: #F44E77;
+      transition: all 3s ease-in;
+  }
+
+  .btn-check {
+      color: var(--neutral-light);
+      margin-left: 1.7rem;
   }
 
   .submit-btn button {
