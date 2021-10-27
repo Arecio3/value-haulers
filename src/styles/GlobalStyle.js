@@ -34,12 +34,14 @@ a {
 
 p {
     color: var(--lavender-secondary);
+    line-height: 1.9rem;
+
 }
 
 .heading {
     font-size: 3rem;
     color: var(--purple-primary);
-
+    line-height: 3rem;
 }
 .heading2 {
     font-size: 1.7rem;

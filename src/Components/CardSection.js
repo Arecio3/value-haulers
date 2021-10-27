@@ -33,10 +33,23 @@ const CardSectionStyled = styled.section`
     .card-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-    }
-    .card-img {
-        display: flex;
-        padding: 10%;
+        height: 350px;
+
+        .card-right {
+            display: flex;
+            justify-content: flex-end;
+
+            .card-img {
+                display: flex;
+                padding: 10%;
+            }
+        }
+
+        .card-left {
+            p {
+                padding: 1rem 0;
+            }
+        }
     }
 `;
 
