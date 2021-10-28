@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import DropDown from "./DropDown";
 import { animateScroll as scroll } from "react-scroll";
 import { Link as LS } from "react-scroll";
-import { Fade } from "react-awesome-reveal";
 import { FaBars } from "react-icons/fa";
 
 function Navigation({ toggle }) {
@@ -34,7 +33,6 @@ function Navigation({ toggle }) {
 
   return (
     <NavigationStyled scrollNav={scrollNav}>
-      <Fade duration={1000} direction="top">
           <div className="logo">
             <NavLinks>
               <img
@@ -117,7 +115,6 @@ function Navigation({ toggle }) {
           <DropDown />
         </ul>
         <PrimaryButton />
-      </Fade>
     </NavigationStyled>
   );
 }
@@ -145,6 +142,8 @@ const NavigationStyled = styled.nav`
 
     @media screen and (max-width: 480px){
       margin-left: -125px;
+      height: 70px;
+      width: 70px;
     }
 
     &:hover {
@@ -167,8 +166,9 @@ const NavigationStyled = styled.nav`
     align-items: center;
     margin-left: -9%;
     li {
-      display: inline-flex;
+      display: flex;
       flex-direction: row;
+      margin-left: 60px;
       @media screen and (max-width: 480px) {
         display: none;
       }

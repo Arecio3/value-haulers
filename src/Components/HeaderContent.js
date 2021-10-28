@@ -3,7 +3,6 @@ import styled from "styled-components";
 import SecondaryButton from "./SecondaryButton";
 import phone from '../images/phone.svg'
 import { useTranslation } from "react-i18next";
-import { Fade } from 'react-awesome-reveal';
 
 const HeaderContent = () => {
 let pinkMessage = 'https://raw.githubusercontent.com/Maclinz/yt_animated-landing-page/b9dd0913bf1b3f8b4226d7eead2dddf68dfcfa94/src/img/message_pink.svg';
@@ -14,7 +13,6 @@ const { t } = useTranslation()
 
   return (
     <HeaderContentStyled>
-      <Fade cascade="true">
       <div className="left-content">
         <div className="left-text-container">
           <h1>{t('NHS')}</h1>
@@ -24,15 +22,12 @@ const { t } = useTranslation()
           <SecondaryButton />
         </div>
       </div>
-      </Fade>
-      <Fade direction="right">
       <div className="right-content">
         <img className="phone" src={phone} alt="" />
         <img src={truck} className="truck" alt="" />
         <img src={pinkMessage} className="pinkMessage"  alt="" />
         <img src={ring} className="ring"  alt="" />
       </div>
-      </Fade>
     </HeaderContentStyled>
   );
 };
@@ -57,7 +52,10 @@ const HeaderContentStyled = styled.div`
       padding-right: 3rem;
       padding-top: 15rem;
 
-      
+      @media screen and (max-width: 480px) {
+        padding-top: 7rem;
+        left: 10px;
+      }
       .white {
         color: white;
       }

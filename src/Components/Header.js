@@ -16,8 +16,8 @@ const Header = () => {
     return (
         <HeaderStyled>
             <Sidebar isOpen={isOpen} toggle={toggle}/>
-            <Navigation toggle={toggle}/>
             <div className="header-content">
+            <Navigation toggle={toggle}/>
                 <HeaderContent />
             </div>
         </HeaderStyled>
