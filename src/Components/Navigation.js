@@ -206,7 +206,7 @@ const MobileIcon = styled.div`
 
   @media screen and (max-width: 428px) {
     font-size: 1.3rem;
-    top: 14px;
+    top: 2px;
     right: 30px;
   }
 `;

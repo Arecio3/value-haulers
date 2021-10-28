@@ -54,7 +54,7 @@ const HeaderContentStyled = styled.div`
 
       @media screen and (max-width: 480px) {
         padding-top: 7rem;
-        left: 10px;
+        margin-left: -100px;
       }
       .white {
         color: white;
@@ -92,6 +92,10 @@ const HeaderContentStyled = styled.div`
               left: auto;
               animation: move 5s infinite;
             transition: all .4s ease-in-out;
+
+            @media screen and (max-width: 480px) {
+              display: none;
+            }
           }
           .truck {
               position: absolute;
@@ -102,6 +106,9 @@ const HeaderContentStyled = styled.div`
             animation: move 8s infinite;
             animation-delay: .5s;
             transition: all .4s ease-in-out;
+            @media screen and (max-width: 480px) {
+              display: none;
+            }
           }
           .ring {
               position: absolute;
@@ -111,6 +118,9 @@ const HeaderContentStyled = styled.div`
               animation: moveTwo 20s infinite;
               transition: all .4s ease-in-out;
           }
+          @media screen and (max-width: 480px) {
+              display: none;
+            }
       }
 
       //Header Animations

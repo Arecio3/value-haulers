@@ -33,7 +33,7 @@ const HeaderStyled = styled.header`
     background-image: url(${bg});
 
     @media screen and (max-width: 480px) {
-        background-position: 50%;    
+        background-position: 30%;    
     }
 
     .header-content{
