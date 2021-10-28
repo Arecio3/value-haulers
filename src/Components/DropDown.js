@@ -31,7 +31,6 @@ export default DropDown;
 
 const DropDownMenu = styled.menu`
     cursor: pointer;
-    
     .lang-menu {
         display: contents;
     }

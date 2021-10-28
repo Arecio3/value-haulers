@@ -161,8 +161,10 @@ const NavigationStyled = styled.nav`
     justify-content: space-between;
     width: 70%;
     align-items: center;
-    
+    margin-left: -9%;
     li {
+      display: inline-flex;
+      flex-direction: row;
       @media screen and (max-width: 480px) {
         display: none;
       }
