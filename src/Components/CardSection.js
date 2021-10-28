@@ -40,6 +40,20 @@ const CardSectionStyled = styled.section`
         @media screen and (max-width: 845px){
             grid-template-columns: repeat(1, 1fr);
         }
+        @media screen and (max-width: 480px){
+            grid-template-columns: repeat(2, 1fr);
+            margin-left: -110px;
+
+            .card-left {
+                padding-top: 5px;
+              line-height: 2.8rem;
+              width: 300px;
+              }
+              .headingP  {
+                padding: 0;
+                font-size: 20px;
+              }
+        }
 
         .card-right {
             display: flex;
