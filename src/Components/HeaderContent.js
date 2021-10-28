@@ -47,7 +47,8 @@ const HeaderContentStyled = styled.div`
         grid-template-columns: repeat(1, 1fr);
     }
     @media screen and (max-width: 480px){
-        grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(1, 100%);
+      
     }
 
   .left-content {

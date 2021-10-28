@@ -3,11 +3,12 @@ import styled from "styled-components";
 import PrimaryButton from "./PrimaryButton";
 import { useTranslation } from "react-i18next";
 import DropDown from "./DropDown";
-import { animateScroll as scroll} from 'react-scroll'
-import { Link as LS } from 'react-scroll';
-import { Fade } from 'react-awesome-reveal';
+import { animateScroll as scroll } from "react-scroll";
+import { Link as LS } from "react-scroll";
+import { Fade } from "react-awesome-reveal";
+import { FaBars } from "react-icons/fa";
 
-function Navigation() {
+function Navigation({ toggle }) {
   const [scrollNav, setScrollNav] = useState(false);
 
   const logo =
@@ -29,34 +30,94 @@ function Navigation() {
 
   const toggleHome = () => {
     scroll.scrollToTop();
-  }
+  };
 
   return (
     <NavigationStyled scrollNav={scrollNav}>
       <Fade duration={1000} direction="top">
-        <div className="logo">
-          <NavLinks><img onClick={toggleHome} className="logo-img" src={logo} smooth="true" duration={100} spy="true" exact='true' offset={-80} alt="sprinter van" /></NavLinks>
-        </div>
+          <div className="logo">
+            <NavLinks>
+              <img
+                onClick={toggleHome}
+                className="logo-img"
+                src={logo}
+                smooth="true"
+                duration={100}
+                spy="true"
+                exact="true"
+                offset={-80}
+                alt="sprinter van"
+              />
+            </NavLinks>
+          </div>
         <ul>
+          <MobileIcon onClick={toggle}>
+            <FaBars />
+          </MobileIcon>
           <li>
-            <NavLinks onClick={toggleHome} smooth={true} duration={100} spy={true} exact='true' offset={-80}>{t("Home")}</NavLinks>
+            <NavLinks
+              onClick={toggleHome}
+              smooth={true}
+              duration={100}
+              spy={true}
+              exact="true"
+              offset={-80}
+            >
+              {t("Home")}
+            </NavLinks>
           </li>
           <li>
-            <NavLinks to="pricing" smooth={true} duration={100} spy={true} exact='true' offset={-150}>{t("Pricing")}</NavLinks>
+            <NavLinks
+              to="pricing"
+              smooth={true}
+              duration={100}
+              spy={true}
+              exact="true"
+              offset={-150}
+            >
+              {t("Pricing")}
+            </NavLinks>
           </li>
           <li>
-            <NavLinks to="reviews" smooth={true} duration={100} spy={true} exact='true' offset={-80}>{t("Reviews")}</NavLinks>
+            <NavLinks
+              to="reviews"
+              smooth={true}
+              duration={100}
+              spy={true}
+              exact="true"
+              offset={-80}
+            >
+              {t("Reviews")}
+            </NavLinks>
           </li>
           <li>
-            <NavLinks to="contact" smooth={true} duration={100} spy={true} exact='true' offset={-120}>{t("Contact")}</NavLinks>
+            <NavLinks
+              to="contact"
+              smooth={true}
+              duration={100}
+              spy={true}
+              exact="true"
+              offset={-120}
+            >
+              {t("Contact")}
+            </NavLinks>
           </li>
           <li>
-            <NavLinks to="story" smooth={true} duration={100} spy={true} exact='true' offset={-80}>{t("Story")}</NavLinks>
+            <NavLinks
+              to="story"
+              smooth={true}
+              duration={100}
+              spy={true}
+              exact="true"
+              offset={-80}
+            >
+              {t("Story")}
+            </NavLinks>
           </li>
           <DropDown />
         </ul>
-      <PrimaryButton />
-    </Fade>
+        <PrimaryButton />
+      </Fade>
     </NavigationStyled>
   );
 }
@@ -69,13 +130,11 @@ const NavigationStyled = styled.nav`
   top: 0;
   align-items: center;
   position: fixed;
-    background: ${({ scrollNav }) => (scrollNav ? "#16194F" : "transparent")};
+  background: ${({ scrollNav }) => (scrollNav ? "#16194F" : "transparent")};
   width: 100%;
   padding: 0 10rem;
   z-index: 10;
   transition: all 0.3s ease-in-out;
-  
-  
 
   .logo-img {
     margin: 0.3rem;
@@ -88,34 +147,60 @@ const NavigationStyled = styled.nav`
       animation: spin 1000ms linear;
     }
     @keyframes spin {
-    from {
-        transform:rotate(0deg);
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
     }
-    to {
-        transform:rotate(360deg);
-    }
-}
   }
 
   ul {
     display: flex;
     justify-content: space-between;
-    width: 40%;
+    width: 70%;
+    align-items: center;
+    
+    li {
+      @media screen and (max-width: 480px) {
+        display: none;
+      }
+    }
   }
 `;
 
 const NavLinks = styled(LS)`
-cursor: pointer;
-transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-right: 15px;
 
-&:hover {
+  &:hover {
     transition: all 0.2s ease-in-out;
-    color: #F44E77;
-}
+    color: #f44e77;
+  }
 
-&.active {
-        border-bottom: 3px solid red;
-    }
-`
+  &.active {
+    border-bottom: 3px solid red;
+  }
+`;
+
+const MobileIcon = styled.div`
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    transition: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  @media screen and (max-width: 428px) {
+    top: 15px;
+  }
+`;
 
 export default Navigation;

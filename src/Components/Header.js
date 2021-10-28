@@ -1,14 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import HeaderContent from './HeaderContent'
 import Navigation from './Navigation'
+import Sidebar from './Sidebar'
 
 const bg = 'https://raw.githubusercontent.com/Maclinz/yt_animated-landing-page/b9dd0913bf1b3f8b4226d7eead2dddf68dfcfa94/src/img/bg.svg'
 
 const Header = () => {
+    const [isOpen, setIsOpen] = useState(false)
+
+    const toggle = () => {
+      setIsOpen(!isOpen);
+    };
+
     return (
         <HeaderStyled>
-            <Navigation />
+            <Sidebar isOpen={isOpen} toggle={toggle}/>
+            <Navigation toggle={toggle}/>
             <div className="header-content">
                 <HeaderContent />
             </div>
@@ -24,6 +32,10 @@ const HeaderStyled = styled.header`
     background-position-y: 100%;
     background-image: url(${bg});
 
+    @media screen and (max-width: 480px) {
+        background-position: 50%;    
+    }
+
     .header-content{
         @media screen and (max-width: 1347px){
             padding: 5rem 14rem;
@@ -34,6 +46,11 @@ const HeaderStyled = styled.header`
         @media screen and (max-width: 990px){
             padding: 5rem 4rem;
         }
+        @media screen and (max-width: 480px){
+            padding: 0;
+        }
+
+      
     }
     `;
 
