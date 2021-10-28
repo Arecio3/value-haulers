@@ -44,8 +44,8 @@ function ReviewSection() {
           <div className="test-container">
             <div className="test-row">
               <div className="test-header">
-                <h3>Reviews</h3>
-                <h1>People Said</h1>
+                <h3 className="review-header">Reviews</h3>
+                <h1 className="review-subHeader">People Said</h1>
               </div>
             </div>
             <div className="test-row">
@@ -112,12 +112,14 @@ function ReviewSection() {
                   <span
                     onClick={() => handleClick("left")}
                     className="slider-buttons outer-shadow hover-in-shadow"
+                    id="left-button"
                   >
                     <i className="fa fa-angle-left"></i>
                   </span>
                   <span
                     onClick={() => handleClick("right")}
                     className="slider-buttons outer-shadow hover-in-shadow"
+                    id="right-button"
                   >
                     <i className="fa fa-angle-right"></i>
                   </span>
@@ -134,8 +136,12 @@ function ReviewSection() {
 const ReviewStyled = styled.section`
   padding: 10rem 0;
 
+  
   .testimonial-section {
     padding: 80px 0 80px;
+    @media screen and (max-width: 480px) {
+      padding: 0;
+    }
   }
 
   .testimonial-section.active {
@@ -320,11 +326,27 @@ const ReviewStyled = styled.section`
       max-width: 80%;
     }
   }
-  @media (max-width: 428px) {
+  @media (max-width: 480px) {
     .test-item {
       flex: 0 0 90%;
       max-width: 90%;
       height: 75%;
+    }
+    #left-button {
+      left: -20px;
+    }
+    #right-button {
+      top: -40px;
+      right: -20px;
+    }
+      .review-header {
+       position: absolute;
+       margin-top: -25px;
+      left: 145px;
+    }
+      .review-subHeader {
+        display: flex;
+       margin-top: 20px;
     }
   }
 `;
