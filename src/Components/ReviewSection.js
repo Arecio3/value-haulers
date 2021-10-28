@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { InnerLayout } from "../styles/Layouts";
-// import review1 from "../images/review1.svg";
-// import review2 from "../images/review2.svg";
+
 function ReviewSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -144,9 +143,6 @@ const ReviewStyled = styled.section`
     }
   }
 
-  .testimonial-section.active {
-    background-color: var(--black-50-dm);
-  }
 
   .test-header {
     color: var(--accent-pink);
@@ -180,10 +176,6 @@ const ReviewStyled = styled.section`
     box-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
   }
 
-  .test-item.active {
-    background-color: var(--black-50-dm);
-    box-shadow: 3px 3px 3px #222327, -3px -3px 3px #363636;
-  }
 
   .test-item i {
     position: absolute;
@@ -270,55 +262,10 @@ const ReviewStyled = styled.section`
     line-height: 40px;
   }
 
-  .test-slider-nav span:after {
-    border-radius: 50%;
-  }
-
-  .outer-shadow {
-    box-shadow: var(--outer-shadow);
-  }
-
   .hover-in-shadow {
     position: relative;
     z-index: 1;
   }
-
-  .hover-in-shadow:hover {
-    box-shadow: var(--outer-shadow-0);
-  }
-
-  .hover-in-shadow:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    transition: all 0.3s ease;
-    z-index: -1;
-  }
-
-  .hover-in-shadow:after {
-    box-shadow: var(--inner-shadow);
-  }
-
-  .inner-shadow {
-    box-shadow: var(--inner-shadow);
-  }
-/* 
-  .review-1-img {
-    top: 95%;
-
-  }
-
-  .review-2-img {
-    margin-bottom: 1%;
-
-  }
-.review-container {
-  padding: 10rem 0; 
-
-}*/
 
   @media (max-width: 768px) {
     .test-item {
@@ -352,19 +299,5 @@ const ReviewStyled = styled.section`
   }
 `;
 
-// const ReviewImg1 = styled.img`
-//   height: 450px;
-//   width: 450px;
-//   position: absolute;
-//   margin-top: 180px;
-//   right: 77%;
-// `;
-// const ReviewImg2 = styled.img`
-//   height: 350px;
-//   width: 350px;
-//   position: absolute;
-//   right: 5%;
-//   margin-top: 10px;
-// `;
 
 export default ReviewSection;
