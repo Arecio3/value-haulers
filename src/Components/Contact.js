@@ -1,9 +1,13 @@
 import { useForm, ValidationError } from "@formspree/react";
 import styled from "styled-components";
 import { InnerLayout } from "../styles/Layouts";
+import { useTranslation } from 'react-i18next'
 
 function Contact() {
   const [state, handleSubmit] = useForm("mknkaavl");
+
+  const { t } = useTranslation()
+
 
   return (
     <ContactStyled>
@@ -12,37 +16,37 @@ function Contact() {
           <div className="contact-container">
             <div className="contact-header">
               <div className="contact-title">
-                <h1>Contact</h1>
-                <h3>Get In Touch</h3>
+                <h1>{t('Contact')}</h1>
+                <h3>{t('GetTouch')}</h3>
               </div>
             </div>
             <div className="contact-box">
               <div className="contact-item">
                 <div className="contact-item-inner outer-shadow">
                   <i className="fa fa-phone"></i>
-                  <span>Phone</span>
-                  <p>+1 813-385-2938</p>
+                  <span>{t('Phone')}</span>
+                  <p>{t('PhoneNum')}</p>
                 </div>
               </div>
               <div className="contact-item">
                 <div className="contact-item-inner outer-shadow">
                   <i className="fa fa-envelope"></i>
-                  <span>Gmail</span>
-                  <p>cuba289@gmail.com</p>
+                  <span>{t('Email')}</span>
+                  <p>{t('EmailAddy')}</p>
                 </div>
               </div>
               <div className="contact-item">
                 <div className="contact-item-inner outer-shadow">
                   <i className="fa fa-map-marker-alt"></i>
-                  <span>Located</span>
-                  <p>Tampa, Florida- 33615</p>
+                  <span>{t('Located')}</span>
+                  <p>{t('Location')}</p>
                 </div>
               </div>
               {/* End of Contact Item */}
             </div>
             <div className="psa">
               <h4>
-                PSA: Make sure to leave your email so we can work together :)
+                {t('PSA')}
               </h4>
             </div>
             <div className="contact-box">
@@ -103,7 +107,7 @@ function Contact() {
                     <div className="submit-btn">
                       {state.succeeded ? (
                         <button type="submit" style={{backgroundColor: '#F44E77', transition: 'all .5s ease-in'}}>
-                          Message Sent !
+                          {t('MsgSent')}
                         </button>
                       ) : (
                         <button
@@ -111,7 +115,7 @@ function Contact() {
                           className="btn-1"
                           disabled={state.submitting}
                         >
-                          Send Message
+                          {t('MsgSend')}
                         </button>
                       )}
                     </div>
