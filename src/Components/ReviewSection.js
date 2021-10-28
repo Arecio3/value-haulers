@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { InnerLayout } from "../styles/Layouts";
+import { useTranslation } from 'react-i18next'
 
 function ReviewSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -34,6 +35,8 @@ function ReviewSection() {
       : setCurrentSlide(currentSlide < data.length - 1 ? currentSlide + 1 : 0);
   };
 
+  const { t } = useTranslation()
+
   return (
     <ReviewStyled>
       <InnerLayout>
@@ -43,8 +46,8 @@ function ReviewSection() {
           <div className="test-container">
             <div className="test-row">
               <div className="test-header">
-                <h3 className="review-header">Reviews</h3>
-                <h1 className="review-subHeader">People Said</h1>
+                <h3 className="review-header">{t('Reviews')}</h3>
+                <h1 className="review-subHeader">{t('PeopleSaid')}</h1>
               </div>
             </div>
             <div className="test-row">
@@ -59,8 +62,7 @@ function ReviewSection() {
                       <i className="fa fa-quote-left left"></i>
                       <i className="fa fa-quote-right right"></i>
                       <p>
-                        Amazing Work! Really knowledgeable, fast learner and
-                        good communicator!!
+                        {t('Quote1')}
                       </p>
                       <img
                         className="test-img"
@@ -77,7 +79,7 @@ function ReviewSection() {
                       <i className="fa fa-quote-left left"></i>
                       <i className="fa fa-quote-right right"></i>
                       <p>
-                        Super fast and reliable! Also great customer service
+                        {t('Quote2')}
                       </p>
                       <img
                         className="test-img"
@@ -94,8 +96,7 @@ function ReviewSection() {
                       <i className="fa fa-quote-left left"></i>
                       <i className="fa fa-quote-right right"></i>
                       <p>
-                        Great to work with! Awesome team player open to new
-                        ideas and willing to learn!
+                        {t('Quote3')}
                       </p>
                       <img
                         className="test-img"
