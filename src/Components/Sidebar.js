@@ -8,6 +8,7 @@ const Sidebar = ({ isOpen, toggle }) => {
 
   const { t } = useTranslation();
 
+
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
       <Icon onClick={toggle}>
@@ -15,13 +16,14 @@ const Sidebar = ({ isOpen, toggle }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="about" onClick={toggle}>{t('About')}</SidebarLink>
+          <SidebarLink to="home" onClick={toggle}>{t('Home')}</SidebarLink>
+          <SidebarLink to="pricing" onClick={toggle}>{t('Pricing')}</SidebarLink>
           <SidebarLink to="reviews" onClick={toggle}>{t('Reviews')}</SidebarLink>
-          <SidebarLink to="services" onClick={toggle}>{t('Services')}</SidebarLink>
           <SidebarLink to="contact" onClick={toggle}>{t('Contact')}</SidebarLink>
+          <SidebarLink to="story" onClick={toggle}>{t('Story')}</SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
-            <SidebarRoute to="contact" onClick={toggle}>{t('HireMe')}</SidebarRoute>
+            <SidebarRoute to="contact" onClick={toggle}>{t('Hire Me')}</SidebarRoute>
         </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>
@@ -93,7 +95,7 @@ const SidebarWrapper = styled.div`
     cursor: pointer;
 
     &:hover {
-        color: #01bf71;
+        color: #F44E77;
         transition: 0.2s ease-in-out;
     }
 `
@@ -109,7 +111,7 @@ const SidebarWrapper = styled.div`
 
  const SidebarRoute = styled(LS)`
     border-radius: 50px;
-    background-color: #01bf71;
+    background-color: #F44E77;
     white-space: nowrap;
     padding: 16px 64px;
     color: #010606;
