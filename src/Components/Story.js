@@ -23,6 +23,7 @@ function Story() {
           </StoryBg>
           <StoryContent>
             <StoryH1>Our Story</StoryH1>
+            <StoryH2>How it all started.</StoryH2>
           </StoryContent>
         </StoryStyled>
         <StoryStyled>
@@ -34,7 +35,8 @@ function Story() {
             />
           </StoryBg>
           <StoryContent>
-            <StoryH1>Our Story</StoryH1>
+            <StoryH1>Dream Job</StoryH1>
+            <StoryP>It started out being a dream the idea of travelling the world in service to the economy as well as taking risks on being able to achieve what everyone wants, happiness in doing what they love. Our dream as Cubans who love traveling America is to provide for busniesses of all kinds from any of the 50 states!</StoryP>
           </StoryContent>
         </StoryStyled>
         <StoryStyled>
@@ -125,6 +127,15 @@ const StoryH1 = styled.h1`
     color: #fff;
     z-index: 3;
     font-size: 200px;
+`
+const StoryH2 = styled.h2`
+    color: #fff;
+    z-index: 3;
+    font-size: 45px;
+`
+const StoryP = styled.p`
+    color: #fff;
+    z-index: 3;
 `
 
 const SlidePic = styled.img`

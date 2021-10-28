@@ -45,8 +45,9 @@ const DropDownMenu = styled.menu`
       }
       @media screen and (max-width: 480px) {
         position: absolute;
-        top: 3px;
+        top: 6px;
         right: 85px;
+        font-size: 28px;
       }
 
 `

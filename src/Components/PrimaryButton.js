@@ -26,12 +26,7 @@ const ButtonStyled = styled.button`
     border: none;
 
     @media screen and (max-width: 480px) {
-        position: absolute;
-        border-radius: 20px;
-        padding: .5rem .8rem;
-        font-size: 12px;
-        right: 8px;
-        top: 35px;
+        display: none;
     }
 `
 const LinkButton = styled(LS)``;
