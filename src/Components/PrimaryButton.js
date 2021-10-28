@@ -24,6 +24,15 @@ const ButtonStyled = styled.button`
     border-radius: 30px;
     outline: none;
     border: none;
+
+    @media screen and (max-width: 480px) {
+        position: absolute;
+        border-radius: 20px;
+        padding: .2.5rem 2.5rem;
+        font-size: 12px;
+        right: 8px;
+        top: 60px;
+    }
 `
 const LinkButton = styled(LS)``;
 export default PrimaryButton

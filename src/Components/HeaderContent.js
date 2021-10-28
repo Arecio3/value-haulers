@@ -56,6 +56,8 @@ const HeaderContentStyled = styled.div`
       align-items: center;
       padding-right: 3rem;
       padding-top: 15rem;
+
+      @media screen and 
       .white {
         color: white;
       }

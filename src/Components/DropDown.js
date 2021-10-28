@@ -33,14 +33,20 @@ const DropDownMenu = styled.menu`
     cursor: pointer;
     .lang-menu {
         display: contents;
-    }
-    .lang-menu-closed {
+      }
+      .lang-menu-closed {
         display: none;
-    }
-
-    .selected-lang {
+      }
+      
+      .selected-lang {
         padding: 3px;
         margin: 3px;
         font-size: 12px;
-    }
+      }
+      @media screen and (max-width: 480px) {
+        position: absolute;
+        top: 15px;
+        right: 85px;
+      }
+
 `

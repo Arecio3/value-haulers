@@ -42,14 +42,15 @@ const Sidebar = ({ isOpen, toggle }) => {
     /* You can do if else in styled components */
     opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
     top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
-    
-`
 
- const CloseIcon = styled(FaTimes)`
+    `
+
+
+const CloseIcon = styled(FaTimes)`
     color: #fff;
-`
+    `
 
- const Icon = styled.div`
+const Icon = styled.div`
     position: absolute;
     top: 1.2rem;
     right: 1.5rem;
@@ -57,9 +58,12 @@ const Sidebar = ({ isOpen, toggle }) => {
     font-size: 1.2rem;
     cursor: pointer;
     outline: none;
-`
+    @media screen and (max-width: 480px) {
+        right: .5rem;
+    }
+    `
 
- const SidebarWrapper = styled.div`
+const SidebarWrapper = styled.div`
     color: #fff;
 `
  const SidebarMenu = styled.ul`

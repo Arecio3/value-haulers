@@ -143,6 +143,10 @@ const NavigationStyled = styled.nav`
     border-radius: 50%;
     cursor: pointer;
 
+    @media screen and (max-width: 480px){
+      margin-left: -125px;
+    }
+
     &:hover {
       animation: spin 1000ms linear;
     }
@@ -195,13 +199,15 @@ const MobileIcon = styled.div`
     position: absolute;
     top: 0;
     transition: translate(-100%, 60%);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     cursor: pointer;
     color: #fff;
   }
 
   @media screen and (max-width: 428px) {
-    top: 15px;
+    font-size: 1.3rem;
+    top: 14px;
+    right: 30px;
   }
 `;
 
