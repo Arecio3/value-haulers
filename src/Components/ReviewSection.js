@@ -327,6 +327,7 @@ const ReviewStyled = styled.section`
     }
   }
   @media (max-width: 480px) {
+    margin-top: -180px;
     .test-item {
       flex: 0 0 90%;
       max-width: 90%;

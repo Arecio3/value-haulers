@@ -128,8 +128,7 @@ function Contact() {
 
 const ContactStyled = styled.div`
   padding: 10rem 0;
-  /* display: grid;
-  grid-template-columns: repeat(2, 1fr); */
+ 
 
   .contact-section {
     padding: 80px 0 80px;
@@ -322,6 +321,24 @@ const ContactStyled = styled.div`
       margin: 5px;
     }
   }
+  @media (max-width: 428px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  
+    .contact-section {
+      margin-top: -155px;
+      margin-left: -140px;
+      margin-right: 50px;
+      justify-content: center;
+      align-items: center;
+    }
+    .submit-btn button {
+      padding: 20px;
+      width: 250px;
+    }
+    .submit-btn {
+      right: 85px;
+    }
+    }
 `;
 
 export default Contact;

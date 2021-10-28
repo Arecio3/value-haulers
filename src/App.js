@@ -16,7 +16,7 @@ function App() {
           <Fade duration={1000} direction="right">
           <CardSection />
           </Fade>
-          <Fade  duration={1000}>
+          <Fade cascade='true' duration={1000}>
           <ReviewSection/>
           </Fade>
           <Fade duration={1000} direction="left">
