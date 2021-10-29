@@ -33,88 +33,89 @@ function Navigation({ toggle }) {
 
   return (
     <NavigationStyled scrollNav={scrollNav}>
-          <div className="logo">
-            <NavLinks>
-              <img
-                onClick={toggleHome}
-                className="logo-img"
-                src={logo}
-                smooth="true"
-                duration={100}
-                spy="true"
-                exact="true"
-                offset={-80}
-                alt="sprinter van"
-              />
-            </NavLinks>
-          </div>
-        <ul>
-          <MobileIcon onClick={toggle}>
-            <FaBars />
-          </MobileIcon>
-          <li>
-            <NavLinks
-              onClick={toggleHome}
-              smooth={true}
-              duration={100}
-              spy={true}
-              exact="true"
-              offset={-80}
-            >
-              {t("Home")}
-            </NavLinks>
-          </li>
-          <li>
-            <NavLinks
-              to="pricing"
-              smooth={true}
-              duration={100}
-              spy={true}
-              exact="true"
-              offset={-150}
-            >
-              {t("Pricing")}
-            </NavLinks>
-          </li>
-          <li>
-            <NavLinks
-              to="reviews"
-              smooth={true}
-              duration={100}
-              spy={true}
-              exact="true"
-              offset={-80}
-            >
-              {t("Reviews")}
-            </NavLinks>
-          </li>
-          <li>
-            <NavLinks
-              to="contact"
-              smooth={true}
-              duration={100}
-              spy={true}
-              exact="true"
-              offset={-120}
-            >
-              {t("Contact")}
-            </NavLinks>
-          </li>
-          <li>
-            <NavLinks
-              to="story"
-              smooth={true}
-              duration={100}
-              spy={true}
-              exact="true"
-              offset={-80}
-            >
-              {t("Story")}
-            </NavLinks>
-          </li>
-          <DropDown />
-        </ul>
-        <PrimaryButton />
+      <div className="logo">
+        <NavLinks>
+          <img
+            onClick={toggleHome}
+            className="logo-img"
+            src={logo}
+            smooth="true"
+            duration={100}
+            spy="true"
+            exact="true"
+            offset={-80}
+            alt="sprinter van"
+          />
+        </NavLinks>
+      </div>
+      <LogoStyled>Value Haulers</LogoStyled>
+      <ul>
+        <MobileIcon onClick={toggle}>
+          <FaBars />
+        </MobileIcon>
+        <li>
+          <NavLinks
+            onClick={toggleHome}
+            smooth={true}
+            duration={100}
+            spy={true}
+            exact="true"
+            offset={-80}
+          >
+            {t("Home")}
+          </NavLinks>
+        </li>
+        <li>
+          <NavLinks
+            to="pricing"
+            smooth={true}
+            duration={100}
+            spy={true}
+            exact="true"
+            offset={-150}
+          >
+            {t("Pricing")}
+          </NavLinks>
+        </li>
+        <li>
+          <NavLinks
+            to="reviews"
+            smooth={true}
+            duration={100}
+            spy={true}
+            exact="true"
+            offset={-80}
+          >
+            {t("Reviews")}
+          </NavLinks>
+        </li>
+        <li>
+          <NavLinks
+            to="contact"
+            smooth={true}
+            duration={100}
+            spy={true}
+            exact="true"
+            offset={-120}
+          >
+            {t("Contact")}
+          </NavLinks>
+        </li>
+        <li>
+          <NavLinks
+            to="story"
+            smooth={true}
+            duration={100}
+            spy={true}
+            exact="true"
+            offset={-80}
+          >
+            {t("Story")}
+          </NavLinks>
+        </li>
+        <DropDown />
+      </ul>
+      <PrimaryButton />
     </NavigationStyled>
   );
 }
@@ -140,7 +141,7 @@ const NavigationStyled = styled.nav`
     border-radius: 50%;
     cursor: pointer;
 
-    @media screen and (max-width: 480px){
+    @media screen and (max-width: 480px) {
       margin-left: -125px;
       height: 70px;
       width: 70px;
@@ -208,6 +209,18 @@ const MobileIcon = styled.div`
     font-size: 2rem;
     top: 2px;
     right: 30px;
+  }
+`;
+
+const LogoStyled = styled.h3`
+  display: none;
+
+  @media screen and (max-width: 490px) {
+    display: contents;
+    font-family: "Comfortaa", cursive;
+    font-size: 20px;
+    left: -8px;
+    color: #fff;
   }
 `;
 
