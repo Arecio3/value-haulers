@@ -99,7 +99,7 @@ const Footer = () => {
     font-size: 14px;
 
     &:hover {
-        color: #01bf71;
+        color: var(--accent-pink);
         transition: 0.3s ease-out;
     }
 `
