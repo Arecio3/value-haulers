@@ -13,9 +13,11 @@ const Footer = () => {
           <FooterLinksWrapper>
             <FooterLinkItems>
               <FooterLinkTitle>{t('AboutUs')}</FooterLinkTitle>
-              <FooterLink to="/discover">{t('HowWorks')}</FooterLink>
-              <FooterLink to="/reviews">{t('Reviews')}</FooterLink>
-              <FooterLink to="/signin">{t('Terms')}</FooterLink>
+              <FooterLink to="home">{t('Home')}</FooterLink>
+              <FooterLink to="pricing">{t('Pricing')}</FooterLink>
+              <FooterLink to="reviews">{t('Reviews')}</FooterLink>
+              <FooterLink to="contact">{t('Contact')}</FooterLink>
+              <FooterLink to="story">{t('Story')}</FooterLink>
             </FooterLinkItems>
             <FooterLinkItems>
               <FooterLinkTitle>{t('OurMission')}</FooterLinkTitle>
@@ -25,9 +27,9 @@ const Footer = () => {
           <FooterLinksWrapper>
             <FooterLinkItems>
               <FooterLinkTitle>{t('Privacy')}</FooterLinkTitle>
-              <FooterLink to="/discover">{('TermsofUse')}</FooterLink>
+              <FooterLink>{t('Terms')}</FooterLink>
               <FooterLink>{t('Sitemap')}</FooterLink>
-              <WebsiteRights>HummingBird © {new Date().getFullYear()} All rights reserved.</WebsiteRights>
+              <WebsiteRights>Value Haulers © {new Date().getFullYear()} All rights reserved.</WebsiteRights>
             </FooterLinkItems>
           </FooterLinksWrapper>
         </FooterLinksContainer> 
@@ -37,7 +39,7 @@ const Footer = () => {
 };
 
  const FooterContainer = styled.footer`
-    background-color: #101522;
+    background-color: var(--dark-primary); 
     margin-top: -3.5rem;
 `
 
