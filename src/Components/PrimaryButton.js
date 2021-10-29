@@ -28,6 +28,10 @@ const ButtonStyled = styled.button`
     @media screen and (max-width: 480px) {
         display: none;
     }
+    @media screen and (max-width: 768px) {
+        padding: .6rem;
+        margin-right: 1rem;
+    }
 `
 const LinkButton = styled(LS)``;
 export default PrimaryButton

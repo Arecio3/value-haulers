@@ -134,6 +134,9 @@ const NavigationStyled = styled.nav`
   z-index: 10;
   transition: all 0.3s ease-in-out;
 
+  @media screen and (min-width: 768px) {
+    padding: 0;
+  }
   .logo-img {
     margin: 0.3rem;
     height: 100px;
@@ -173,8 +176,11 @@ const NavigationStyled = styled.nav`
       @media screen and (max-width: 480px) {
         display: none;
       }
+      @media screen and (min-width: 768px) {
+        margin-left: 0;
     }
   }
+}
 `;
 
 const NavLinks = styled(LS)`
@@ -189,6 +195,9 @@ const NavLinks = styled(LS)`
 
   &.active {
     border-bottom: 3px solid red;
+  }
+  @media screen and (min-width: 768px) {
+    margin-right: 35px;
   }
 `;
 
@@ -210,6 +219,10 @@ const MobileIcon = styled.div`
     top: 2px;
     right: 30px;
   }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  
 `;
 
 const LogoStyled = styled.h3`
