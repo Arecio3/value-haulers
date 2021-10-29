@@ -10,8 +10,8 @@ import mobileTraffic from '../images/video-replace.jpeg';
 
 function Story() {
   return (
-    <Carousel autoPlay='true' interval={10000} infiniteLoop='true' swipeable='true' emulateTouch='true'>
-        <StoryStyled id="story">
+    <Carousel id="story" autoPlay='true' interval={10000} infiniteLoop='true' swipeable='true' emulateTouch='true'>
+        <StoryStyled>
           <StoryBg>
             <Video
               src={traffic}

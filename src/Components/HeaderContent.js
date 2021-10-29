@@ -15,7 +15,7 @@ const HeaderContent = () => {
   const { t } = useTranslation();
 
   return (
-    <HeaderContentStyled>
+    <HeaderContentStyled id="home">
       <div className="left-content">
         <div className="left-text-container">
           <h1>{t("NHS")}</h1>
