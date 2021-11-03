@@ -20,7 +20,6 @@ const Sidebar = ({ isOpen, toggle }) => {
           <SidebarLink to="pricing" onClick={toggle}>{t('Pricing')}</SidebarLink>
           <SidebarLink to="reviews" onClick={toggle}>{t('Reviews')}</SidebarLink>
           <SidebarLink to="contact" onClick={toggle}>{t('Contact')}</SidebarLink>
-          <SidebarLink to="story" onClick={toggle}>{t('Story')}</SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
             <SidebarRoute to="contact" onClick={toggle}>{t('Hire Me')}</SidebarRoute>

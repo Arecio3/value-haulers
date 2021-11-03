@@ -83,6 +83,13 @@ const HeaderContentStyled = styled.div`
     .phone {
       height: 600px;
       width: 80%;
+
+      @media screen and (max-width: 1024px) {
+      margin-left: -105px;
+      margin-top: -15%;
+      height: 120%;
+      width: 120%;
+    }      
     }
 
     .pinkMessage {
@@ -106,6 +113,12 @@ const HeaderContentStyled = styled.div`
       animation: move 8s infinite;
       animation-delay: 0.5s;
       transition: all 0.4s ease-in-out;
+      
+      @media screen and (max-width: 1024px) {
+        top: 85%;
+       height: 20rem;
+       width: 20rem;
+      }
       @media screen and (max-width: 480px) {
         display: none;
       }
@@ -117,9 +130,18 @@ const HeaderContentStyled = styled.div`
       left: auto;
       animation: moveTwo 20s infinite;
       transition: all 0.4s ease-in-out;
+      @media screen and (max-width: 1024px) {
+      right: -30%;
+      bottom: 2%;
+
+    }
     }
     @media screen and (max-width: 480px) {
       display: none;
+    }
+
+    @media screen and (max-width: 1024px) {
+      right: -15%;
     }
   }
 
