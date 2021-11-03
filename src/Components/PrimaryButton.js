@@ -32,6 +32,12 @@ const ButtonStyled = styled.button`
         padding: .6rem;
         margin-right: 1rem;
     }
+    @media screen and (max-width: 1024px) {
+        margin-right: -4.5rem;
+    }
+    @media screen and (max-width: 1536px) {
+        margin-right: -9rem;
+    }
 `
 const LinkButton = styled(LS)``;
 export default PrimaryButton

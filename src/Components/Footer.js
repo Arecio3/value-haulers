@@ -17,7 +17,6 @@ const Footer = () => {
               <FooterLink to="pricing">{t('Pricing')}</FooterLink>
               <FooterLink to="reviews">{t('Reviews')}</FooterLink>
               <FooterLink to="contact">{t('Contact')}</FooterLink>
-              <FooterLink to="story">{t('Story')}</FooterLink>
             </FooterLinkItems>
             <FooterLinkItems>
               <FooterLinkTitle>{t('OurMission')}</FooterLinkTitle>

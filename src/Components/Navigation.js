@@ -101,18 +101,6 @@ function Navigation({ toggle }) {
             {t("Contact")}
           </NavLinks>
         </li>
-        <li>
-          <NavLinks
-            to="story"
-            smooth={true}
-            duration={100}
-            spy={true}
-            exact="true"
-            offset={-80}
-          >
-            {t("Story")}
-          </NavLinks>
-        </li>
         <DropDown />
       </ul>
       <PrimaryButton />
@@ -134,9 +122,6 @@ const NavigationStyled = styled.nav`
   z-index: 10;
   transition: all 0.3s ease-in-out;
 
-  @media screen and (min-width: 768px) {
-    padding: 0;
-  }
   .logo-img {
     margin: 0.3rem;
     height: 100px;
@@ -144,6 +129,11 @@ const NavigationStyled = styled.nav`
     border-radius: 50%;
     cursor: pointer;
 
+    @media screen and (max-width: 1024px) {
+      margin-left: -105px;
+      height: 80px;
+      width: 80px;
+    }
     @media screen and (max-width: 480px) {
       margin-left: -125px;
       height: 70px;
@@ -169,6 +159,16 @@ const NavigationStyled = styled.nav`
     width: 70%;
     align-items: center;
     margin-left: -9%;
+    @media screen and (max-width: 1024px) {
+      margin-right: -10%;
+    }
+    @media screen and (max-width: 1536px) {
+        margin-left: -9rem;
+    }
+    @media screen and (max-width: 490px) {
+        margin-left: -4rem;
+    }
+
     li {
       display: flex;
       flex-direction: row;
@@ -178,9 +178,13 @@ const NavigationStyled = styled.nav`
       }
       @media screen and (min-width: 768px) {
         margin-left: 0;
+      }
+      @media screen and (max-width: 1536px) {
+        margin-right: 4.6rem;
+    }
+     
     }
   }
-}
 `;
 
 const NavLinks = styled(LS)`
@@ -199,6 +203,9 @@ const NavLinks = styled(LS)`
   @media screen and (min-width: 768px) {
     margin-right: 35px;
   }
+  @media screen and (max-width: 1536px) {
+        margin-right: -3.2rem;
+    }
 `;
 
 const MobileIcon = styled.div`
@@ -222,7 +229,6 @@ const MobileIcon = styled.div`
   @media screen and (min-width: 768px) {
     display: none;
   }
-  
 `;
 
 const LogoStyled = styled.h3`
